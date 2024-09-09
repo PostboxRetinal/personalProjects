@@ -20,6 +20,9 @@ fi
 
 # Logic to remove the old floorp directory and replace it with the new one
 ruta=$2/floorp/
-echo path: $ruta
-sudo rm -rI $ruta
-sudo tar -xjvf $1 -C $ruta -w
+echo Destination path: $2/floorp/
+
+# Check if the directory exists
+sudo rm -r $ruta
+sudo mkdir $ruta
+sudo tar -xjvf $1 -C $2
