@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bhashcalc"
+version = "0.1.0"
+description = "A tool written in python for hashing and copying text to clipboard"
+authors = ["PostboxRetinal <78338192+PostboxRetinal@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyperclip = "^1.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
