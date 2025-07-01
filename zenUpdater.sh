@@ -16,8 +16,8 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Logic to remove the old zen directory and replace it with the new one
-ruta=$2/zen/
-echo Destination path: $ruta
+path=$2/zen/
+echo Destination path: $path
 
 # Check if the tarball file exists
 if [ ! -f "$1" ]; then
@@ -26,20 +26,20 @@ if [ ! -f "$1" ]; then
 fi
 
 # Remove old directory and create new one
-if ! sudo rm -rf $ruta; then
-  echo "Error: Failed to remove the old zen directory at $ruta"
+if ! sudo rm -rf $path; then
+  echo "Error: Failed to remove the old zen directory at $path"
   exit 1
 fi
 
 # Create the new zen directory
-if ! sudo mkdir -p $ruta; then
-  echo "Error: Failed to create the zen directory at $ruta"
+if ! sudo mkdir -p $path; then
+  echo "Error: Failed to create the zen directory at $path"
   exit 1
 fi
 
 # Extract the tarball file to the new zen directory
-if ! sudo tar -xvf $1 -C $ruta --strip-components=1; then
-  echo "Error: Failed to extract the tarball $1 to $ruta"
+if ! sudo tar -xvf $1 -C $path --strip-components=1; then
+  echo "Error: Failed to extract the tarball $1 to $path"
   exit 1
 fi
 
