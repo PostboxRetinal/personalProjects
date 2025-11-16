@@ -1,4 +1,5 @@
 # Bastian's Personal Projects
+## (deprecated repo since I've moved all to system functions under .dotfiles private repo)
 
 Here I'll push all side-projects and code stuff I've worked with on my free time, including:
 
